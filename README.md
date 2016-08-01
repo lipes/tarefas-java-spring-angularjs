@@ -14,8 +14,8 @@ as tabelas serão criadas automaticamente através do JPA/hibernate
 
 * *Java*
 * *Spring MVC* 
+* *PostgreSQL*
 * *AngularJs*
 * *Thymeleaf* 
 * *Bootstrap* 
-* *Spring MVC* 
-* *PostgreSQL*
+
