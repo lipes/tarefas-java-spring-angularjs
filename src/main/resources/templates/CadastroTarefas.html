@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml" 
+	xmlns:th="http://www.thymeleaf.org"
+    xmlns:layout="http://www.ultraq.net.nz/thymeleaf/layout"
+    layout:decorator="LayoutPadrao">
+<head>
+	<title>Cadastro de Tarefas</title>
+</head>
+    <section layout:fragment="conteudo" class="conteudo">
+	    <form class="form-horizontal" method="POST" action="/tarefas" th:object="${tarefa}">
+		    <div layout:include="MensagemGeral"></div>
+	    	
+	    	<div class="panel panel-default">
+	    		<div class="panel-heading">
+	    			<div class="clearfix">
+			      		<h1 class="panel-title pull-left nopadding">Nova Tarefa</h1>
+			      		<a href="/tarefas" class="btn btn-link pull-right nopadding">Voltar para tarefas</a>
+		      		</div>
+	    		</div>
+	    		
+	    		<div class="panel-body">
+	    			<input type="hidden" th:field="*{id}"/>
+					<div class="form-group">
+						<label for="descricao" class="col-sm-2 control-label">Descrição</label>
+						<div class="col-sm-4"> 
+							<input type="text" class="form-control" id="descricao" th:field="*{tarefaDescricao}"/>
+						</div>
+					</div>
+					<div class="form-group">
+						<label for="dataInicioTarefa" class="col-sm-2 control-label">Data Inicio Tarefa</label>
+						<div class="col-sm-2">  
+							<input type="text" class="form-control"	id="dataInicioTarefa" th:field="*{dataInicioTarefa}" 
+							data-provide="datepicker" data-date-format="dd/mm/yyyy" data-date-language="pt-BR"
+							data-date-autoclose="true" data-date-today-highlight="true" data-date-orientation="bottom"/>
+						</div>
+					</div>
+					<div class="form-group">
+						<label for="dataFimTarefa" class="col-sm-2 control-label">Data Fim Prevista</label>
+						<div class="col-sm-2">  
+							<input type="text" class="form-control"	id="dataFimTarefa" th:field="*{dataFimTarefa}" 
+							data-provide="datepicker" data-date-format="dd/mm/yyyy" data-date-language="pt-BR"
+							data-date-autoclose="true" data-date-today-highlight="true" data-date-orientation="bottom"/>
+						</div>
+					</div>
+					<div class="form-group">
+						<label for="status" class="col-sm-2 control-label">Usuario</label>
+						<div class="col-sm-2">
+							<select class="form-control" name="usuario">
+								<option th:each="usuario : ${todosUsuarios}" th:value="${usuario.id}" th:text="${usuario.usuarioNome}"></option>
+	                    	</select>
+	                    </div>
+					</div>
+					<div class="form-group">
+						<label for="status" class="col-sm-2 control-label">Status</label>
+						<div class="col-sm-8">
+							<label class="radio-inline" th:each="status : ${todasStatusTarefa}">
+							  <input name="status" type="radio" th:value="${status}" th:text="${status.descricao}" th:disabled="${status.descricao} != 'Pendente'" th:checked="${status.descricao} == 'Pendente'" />
+							</label>
+						</div>
+					</div>
+					<div class="form-group">
+						<div class="col-sm-offset-2 col-sm-10">
+							<button type="submit" class="btn btn-primary">Salvar</button>
+						</div>
+					</div>
+				</div>
+	    	</div>
+	    </form>
+    </section>
+</html>

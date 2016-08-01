@@ -1,0 +1,77 @@
+.navbar-brand {
+	padding-top: 12px;
+}
+.link-panel{
+	float:right;
+}
+.conteudo{margin-left: 15px;margin-right: 15px;}
+.nopadding {padding:0px;}
+.navbar-header {font-color: #fff; width:100%;}
+.navbar-header .navbar-brand{color: #fff !important; margin-top:3px;}
+
+.icon-stat-label {
+    display: block;
+    color: #999;
+    font-size: 13px;
+}
+.icon-stat-value {
+    display: block;
+    font-size: 28px;
+    font-weight: 600;
+}
+.icon-stat-visual {
+    position: relative;
+    top: 22px;
+    display: inline-block;
+    width: 32px;
+    height: 32px;
+    border-radius: 4px;
+    text-align: center;
+    font-size: 18px;
+    line-height: 31px;
+}
+.icon-stat {
+    display: block;
+    overflow: hidden;
+    position: relative;
+    padding: 15px;
+    margin-bottom: 1em;
+    background-color: #fff;
+    border-radius: 4px;
+    border: 1px solid #ddd;
+}
+.icon-stat-footer {
+    padding: 10px 0 0;
+    margin-top: 10px;
+    color: #aaa;
+    font-size: 12px;
+    border-top: 1px solid #eee;
+}
+.bg-tertiary {
+    color: #fff;
+    background: #d74b4b;
+}
+.legenda { font-size:12px;}
+.legenda .label-default{font-weight:normal; color:#777; padding:0px; font-size:13px; background:#fff}
+.legenda span{margin-left:5px;}
+.bg-primary {
+    color: #fff;
+    background: #6685a4;
+}
+.bg-secondary {
+    color: #fff;
+    background: #6685a4;
+}
+.busca{padding:0px; margin-bottom:15px;}
+.text-green {color:green;}
+.text-red {color:#d74b4b;}
+.bg-green {
+    color: #fff;
+    background: green;
+    border: 1px solid green;
+}
+.bg-default {
+    color: #354b5e;
+    background: #fff;
+    border: 1px solid #ddd;
+}
